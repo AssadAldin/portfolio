@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import assadImg from "@/images/assad2.png";
+import assadImg from "@/images/assad4.png";
 import Image from "next/image";
 import { motion } from "motion/react";
 
 const Photo = () => {
-  const circleColors = ["#00ff99", "#00ff9950", "#00ff9920"];
+  const circleColors = ["#00ff99", "#00ff9980", "#00ff9940"];
   const circleVariants = {
     initial: {
       strokeDasharray: "24 10 0 0",

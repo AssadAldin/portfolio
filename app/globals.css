@@ -61,11 +61,17 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-bodyColor text-foreground;
   }
-}
-.hoverEffect {
-  @apply transition-all duration-300 cursor-pointer ease-in-out;
+  .hoverEffect {
+    @apply transition-all duration-300 cursor-pointer ease-in-out;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
 }
 
 /* :root {
@@ -77,7 +83,7 @@ body {
 } */
 
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   src: url("../app/fonts/JetBrains.woff2");
   font-display: swap;
   font-weight: 100 800;
