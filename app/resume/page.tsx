@@ -1,8 +1,17 @@
 "use client";
 import PageLayout from "@/components/PageLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Briefcase, Code2, GraduationCap, Languages, User } from "lucide-react";
+import {
+  Briefcase,
+  Calendar,
+  Code2,
+  GraduationCap,
+  Languages,
+  User,
+} from "lucide-react";
 import React from "react";
+import { motion } from "motion/react";
+import { Badge } from "@/components/ui/badge";
 
 const tabMenu = [
   { title: "Experience", value: "experience", icon: Briefcase },
@@ -117,9 +126,45 @@ const ResumePage = () => {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div>
+          <div className="flex-1 min-h-[400px]">
             <TabsContent value="experience">
-              <h2>Exper</h2>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-2xl font-bold mb-6 text-lightSky"
+              >
+                {tabContent.experience.title}
+              </motion.h2>
+              <div className="space-y-6">
+                {tabContent?.experience?.items.map((item, index) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    key={index}
+                    className="border rounded-lg border-lightSky/20 p-6"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item?.role}</h3>
+                        <p className="text-muted-foreground">{item?.company}</p>
+                      </div>
+                      <div className="flex items-center text-muted-foreground">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {item?.period}
+                      </div>
+                    </div>
+                    <p className="mb-4 text-white">{item?.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {item?.highlights.map((highlight, i) => (
+                        <Badge key={i} variant="secondary">
+                          {highlight}
+                        </Badge>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </TabsContent>
           </div>
         </Tabs>
