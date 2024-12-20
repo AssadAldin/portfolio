@@ -5,7 +5,6 @@ import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import Image from "next/image";
 
 export default function Home() {
   return (

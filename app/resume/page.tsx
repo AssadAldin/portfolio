@@ -6,7 +6,6 @@ import {
   Calendar,
   Code2,
   GraduationCap,
-  Languages,
   User,
 } from "lucide-react";
 import React from "react";

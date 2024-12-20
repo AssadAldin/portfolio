@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import React, { useState } from "react";
 import pOne from "@/images/travent.png";
 import pTwo from "@/images/oec.png";
 import pThree from "@/images/GS.png";
@@ -61,22 +60,12 @@ const projects = [
 ];
 
 const WorkPage = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleSlideChange = (index: number) => {
-    setCurrentIndex(index);
-  };
   return (
     <div className="py-6 md:py-12">
       <PageLayout>
         <Carousel
           opts={{ align: "start", loop: true }}
           className="w-full"
-          onSelect={() => {
-            const index = 0;
-            if (typeof index === "number") {
-              handleSlideChange(index);
-            }
-          }}
         >
           <CarouselContent>
             {projects?.map((project) => (
@@ -162,7 +151,7 @@ const WorkPage = () => {
                       </div>
                       {/* image */}
                       <div className="w-full md:w-1/2 order-1 md:order-2">
-                        <div className="relative h-64 md:h-96 bg-gray-700 rounded-lg overflow-hidden">
+                        <div className="relative h-96 bg-gray-700 rounded-lg overflow-hidden">
                           <Image
                             src={project?.image}
                             fill
@@ -177,7 +166,7 @@ const WorkPage = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute right-10 -bottom-8">
+          <div className="absolute right-10 mx-5 -bottom-8">
             <CarouselPrevious className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect" />
             <CarouselNext className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect" />
           </div>
