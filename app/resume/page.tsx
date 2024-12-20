@@ -44,7 +44,7 @@ const tabContent = {
   },
   education: {
     title: "Educational Background",
-    Items: [
+    items: [
       {
         degree: "Master of Computer Science",
         institution: "Tech University",
@@ -164,6 +164,127 @@ const ResumePage = () => {
                     </div>
                   </motion.div>
                 ))}
+              </div>
+            </TabsContent>
+            <TabsContent value="education">
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-2xl font-bold mb-6 text-lightSky"
+              >
+                {tabContent.education.title}
+              </motion.h2>
+              <div className="space-y-6">
+                {tabContent?.education?.items.map((item, index) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    key={index}
+                    className="border rounded-lg border-lightSky/20 p-6"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">
+                          {item?.degree}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {item?.institution}
+                        </p>
+                      </div>
+                      <div className="flex items-center text-muted-foreground">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {item?.period}
+                      </div>
+                    </div>
+                    <p className="mb-4 text-white">{item?.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {item?.achievements.map((achievement, i) => (
+                        <Badge key={i} variant="secondary">
+                          {achievement}
+                        </Badge>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
+            <TabsContent value="skills">
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-2xl font-bold mb-6 text-lightSky"
+              >
+                {tabContent.skills.title}
+              </motion.h2>
+              <div className="space-y-6">
+                {tabContent?.skills?.categories.map((item, index) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    key={index}
+                    className="border rounded-lg border-lightSky/20 p-6"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item?.name}</h3>
+                        <p className="text-muted-foreground">
+                          {item?.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {item?.skills.map((skill, i) => (
+                        <Badge key={i} variant="secondary">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
+            <TabsContent value="about">
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-2xl font-bold mb-6 text-lightSky"
+              >
+                {tabContent.about.title}
+              </motion.h2>
+              <div className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="border rounded-lg border-lightSky/20 p-6"
+                >
+                  <p className="text-white/90 mb-6 text-lg">
+                    {tabContent.about.bio}
+                  </p>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Interests</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {tabContent.about.interests.map((interest, i) => (
+                          <Badge key={i} variant="secondary">
+                            {interest}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Languages</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {tabContent.about.Languages.map((language, i) => (
+                          <Badge key={i} variant="secondary">
+                            {language}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </TabsContent>
           </div>
