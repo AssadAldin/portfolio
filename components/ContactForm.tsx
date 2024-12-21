@@ -90,17 +90,13 @@ const ContactForm = () => {
       setLoading(false);
     }
   };
-  
+
   return (
     <div className="space-y-4">
-      <h3 className="text-2xl md:text-4xl text-lightSky">
-        Let&apos work together
-      </h3>
+      <h3 className="text-2xl md:text-4xl text-lightSky">Let, work together</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-        labore dolorem dolor animi quam? Sequi cumque, vero magnam sapiente,
-        excepturi doloremque deleniti molestiae, iste ad labore nam odio soluta
-        voluptatibus!
+        Let’s work together to achieve your goals. Fill out the form below, and
+        I’ll get back to you as soon as possible!!
       </p>
       <>
         {success ? (
@@ -127,7 +123,8 @@ const ContactForm = () => {
                 placeholder="Email address"
                 value={formData.Email}
                 onChange={handleChange}
-                disabled={loading}className="disabled:bg-white/10"
+                disabled={loading}
+                className="disabled:bg-white/10"
               />
             </div>
             <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -138,7 +135,8 @@ const ContactForm = () => {
                 placeholder="Phone number"
                 value={formData.Phone}
                 onChange={handleChange}
-                disabled={loading}className="disabled:bg-white/10"
+                disabled={loading}
+                className="disabled:bg-white/10"
               />
               <Input
                 type="text"
@@ -147,7 +145,8 @@ const ContactForm = () => {
                 placeholder="Address"
                 value={formData.Address}
                 disabled={loading}
-                onChange={handleChange}className="disabled:bg-white/10"
+                onChange={handleChange}
+                className="disabled:bg-white/10"
               />
             </div>
             <Textarea
@@ -156,8 +155,9 @@ const ContactForm = () => {
               rows={5}
               value={formData.Message}
               onChange={handleChange}
-              disabled={loading}className="disabled:bg-white/10"
-              />
+              disabled={loading}
+              className="disabled:bg-white/10"
+            />
             <Select onValueChange={handleSelectChange} disabled={loading}>
               <SelectTrigger>
                 <SelectValue placeholder="Select a service" />

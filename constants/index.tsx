@@ -18,28 +18,28 @@ export const servicesData = [
     _id: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus   velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
+      "Web development is the process of creating, building, and maintaining websites or web applications that cater to specific needs, whether for businesses, individuals, or organizations. This service includes a range of activities designed to ensure your online presence is functional, user-friendly, and aligned with your objectives.",
+    href: "/contact",
   },
   {
     _id: "02",
-    title: "App Development",
+    title: "SEO & Website Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjs BD",
+      "SEO (Search Engine Optimization) and website optimization are essential components of a successful online presence. Together, they ensure your website is visible, fast, user-friendly, and capable of attracting and retaining visitors while ranking higher on search engines like Google.",
+    href: "/contact",
   },
   {
     _id: "03",
-    title: "Web Development",
+    title: "Logo Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus   velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
+      "A logo is more than just a visual symbol—it’s the cornerstone of your brand identity. It represents your values, mission, and personality, leaving a lasting impression on your audience. A well-designed logo not only enhances brand recognition but also builds trust and credibility.",
+    href: "/contact",
   },
   {
     _id: "04",
-    title: "App Development",
+    title: "Social Media",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjs BD",
+      "Social media has become a cornerstone of digital marketing, offering businesses and individuals the opportunity to connect, engage, and grow their audiences. With billions of active users across platforms like Facebook, Instagram, Twitter, LinkedIn, and TikTok, social media allows brands to reach their target audience more effectively than ever before.",
+    href: "/contact",
   },
 ];

@@ -29,10 +29,10 @@ const projects = [
     title: "Travent",
     category: "Full Stack",
     description:
-      "Booking Core is a Booking System based on Laravel, designed for a travel website, Marketplace, Travel Agency, Tour Operator, Room Bnb, Villa Rental, Resort Rental, Make Travel website. With 6+ years working on travel products we confident to bring to you best product for your travel site with optimized UX/UI, friendly on mobile on the search engine.",
-    stack: ["Laravel", "React js", "tailwind css", "bootstrap", "MySQL"],
+      "Travent is an innovative platform designed for booking chalets and holiday houses, offering users a seamless and enjoyable experience. Built with a robust tech stack, it combines the power of React for a dynamic and responsive frontend with the reliability of Laravel for a secure and efficient backend.",
+    stack: ["Laravel", "React js", "tailwind css", "MySQL"],
     image: pOne,
-    liveUrl: "https://travent.ae",
+    liveUrl: "https://travent.me",
     githubUrl: "https://github.com/AssadAldin",
   },
   {
@@ -40,21 +40,10 @@ const projects = [
     title: "Ohayla Educational Classes",
     category: "Full Stack",
     description:
-      "We aim at providing complete learning to help you accelerate the practice of gynaecology and obestetric through research, training, education and maintaining the highest level of expertise and ethical standards.",
+      "OEC (Ohayla Educational Classes) is a dedicated educational platform designed to empower healthcare professionals, particularly those specializing in gynaecology and obstetrics. The primary goal of OEC is to provide a comprehensive learning experience that fosters growth, research, and the highest standards of expertise in the field.",
     stack: ["Laravel", "bootstrap", "MySQL", "javascript"],
     image: pTwo,
     liveUrl: "https://oec.sd",
-    githubUrl: "https://github.com/AssadAldin",
-  },
-  {
-    id: "03",
-    title: "Genius Solution",
-    category: "Full Stack",
-    description:
-      "Booking Core is a Booking System based on Laravel, designed for a travel website, Marketplace, Travel Agency, Tour Operator, Room Bnb, Villa Rental, Resort Rental, Make Travel website. With 6+ years working on travel products we confident to bring to you best product for your travel site with optimized UX/UI, friendly on mobile on the search engine.",
-    stack: ["Next js", "tailwind css", "PostgreSQL"],
-    image: pThree,
-    liveUrl: "https://gs.sd",
     githubUrl: "https://github.com/AssadAldin",
   },
 ];
@@ -63,10 +52,7 @@ const WorkPage = () => {
   return (
     <div className="py-6 md:py-12">
       <PageLayout>
-        <Carousel
-          opts={{ align: "start", loop: true }}
-          className="w-full"
-        >
+        <Carousel opts={{ align: "start", loop: true }} className="w-full">
           <CarouselContent>
             {projects?.map((project) => (
               <CarouselItem key={project.id}>
@@ -101,21 +87,18 @@ const WorkPage = () => {
                             <TooltipProvider>
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <Button
-                                    variant="outline"
-                                    size="icon"
-                                    className="bg-lightSky/5 text-white/80 border hover:bg-lightSky/20 border-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
-                                  >
-                                    <Link
-                                      href={project?.liveUrl}
-                                      target="_blank"
+                                  <Link href={project?.liveUrl} target="_blank">
+                                    <Button
+                                      variant="outline"
+                                      size="icon"
+                                      className="bg-lightSky/5 text-white/80 border hover:bg-lightSky/20 border-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
                                     >
                                       <ArrowUpRight />{" "}
                                       <span className="sr-only">
                                         View Live Project
                                       </span>
-                                    </Link>
-                                  </Button>
+                                    </Button>
+                                  </Link>
                                 </TooltipTrigger>
                                 <TooltipContent className="bg-white text-black font-semibold">
                                   <p>View Live Project</p>

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
-    "A web programmer with a practical understanding of computers,programming languages, and related technologies, enabling the effective resolution of complex problems.";
+    "AA web programmer with 6 years of experience, including 5 years in programming, adept at solving complex problems using a strong understanding of computers, programming languages, and related technologies. Committed to continuous growth, adding value, and finding opportunities to make a meaningful impact.";
   const { displayedText, isComplete } = useTypeWriter(description, 30);
   useEffect(() => {
     setHasLoaded(true);

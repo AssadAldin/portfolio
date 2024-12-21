@@ -1,13 +1,7 @@
 "use client";
 import PageLayout from "@/components/PageLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Briefcase,
-  Calendar,
-  Code2,
-  GraduationCap,
-  User,
-} from "lucide-react";
+import { Briefcase, Calendar, Code2, GraduationCap, User } from "lucide-react";
 import React from "react";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
@@ -24,20 +18,40 @@ const tabContent = {
     title: "Professional Experience",
     items: [
       {
-        role: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2021 - Present",
+        role: "Software Developer",
+        company: "Travent",
+        period: "2023 - Present",
         description:
-          "Led the development of multiple React-based web applications, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.",
-        highlights: ["React", "Next.js", "TypeScript", "Team Leadership"],
+          "I worked at Travent Company as a software developer. My role primarily involved maintaining the Travent app and implementing new features to enhance its functionality.",
+        highlights: [
+          "React",
+          "Laravel",
+          "Mysql",
+          "Bootstrap",
+          "Tailwind css",
+          "ERP Next",
+          "ICAL (I Calendar)",
+        ],
       },
       {
-        role: "Full Stack Developer",
+        role: "Computer Technical Assistant",
         company: "Digital Innovations Ltd",
-        period: "2018 - 2021",
+        period: "2022 - 2023",
         description:
-          "Developed and maintained full-stack applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver high-quality solutions.",
-        highlights: ["Node.js", "React", "MongoDB", "AWS"],
+          "Provided technical support for hardware and software issues, ensuring smooth operations across various departments.",
+        highlights: [
+          "Technical support",
+          "Team work",
+          "Troubleshot network problems",
+        ],
+      },
+      {
+        role: "Backend developer",
+        company: "Basil Media",
+        period: "2019 - 2022",
+        description:
+          "Provided technical support for hardware and software issues, ensuring smooth operations across various departments.",
+        highlights: ["Laravel", "Mysql", "Bootstrap", "swagger API"],
       },
     ],
   },
@@ -45,20 +59,12 @@ const tabContent = {
     title: "Educational Background",
     items: [
       {
-        degree: "Master of Computer Science",
-        institution: "Tech University",
-        period: "2016 2018",
-        description:
-          "Specialized in Software Engineering and Artificial Intelligence. Graduated with honors.",
-        achievements: ["4.0 GPA", "Research Publication", "Dean's List"],
-      },
-      {
-        degree: "Bachelor of Computer Science",
-        institution: "State University",
-        period: "2012 - 2016",
+        degree: "Bachelor of Science in Information Technology",
+        institution: "SHARG EL NIEL COLLAGE",
+        period: "2012 - 2017",
         description:
           "Foundation in computer science principles, data structures, and algorithms.",
-        achievements: ["Academic Excellence Award", "Programming Club Lead"],
+        achievements: ["Honors Degree", "Programming Club Lead"],
       },
     ],
   },
@@ -68,7 +74,7 @@ const tabContent = {
       {
         name: "Frontend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum ,impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
+          "I specialize in modern frontend development, leveraging powerful tools and frameworks to build responsive, interactive, and visually stunning web applications",
         skills: [
           "React",
           "Next.js",
@@ -80,14 +86,14 @@ const tabContent = {
       {
         name: "Backend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum ,impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Node", "Express", "Python", "PostgreSQL", "MongoDB"],
+          "Backend development focuses on creating the server-side logic, database interactions, and APIs that power the functionality of web and mobile applications. It's the backbone of any digital platform, ensuring seamless data flow, security, and performance.",
+        skills: ["Laravel", "Mysql", "Django", "PostgreSQL", "swagger API"],
       },
       {
         name: "Tools & Others",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum ,impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Git", "Docker", "AWS", "CI/CD", "Agile Methodologies"],
+          "Git, Docker, swagger API These tools enhance my workflow by improving collaboration, scalability, and reliability in development projects.",
+        skills: ["Git", "Docker", "swagger API"],
       },
     ],
   },
@@ -97,7 +103,6 @@ const tabContent = {
     interests: [
       "Open Source Contributing",
       "Tech Blogging",
-      "UI/UX",
       "Machine Learning",
     ],
     Languages: ["Arabic (Native)", "English(Intermediate)"],
@@ -111,7 +116,7 @@ const ResumePage = () => {
           defaultValue="experience"
           className="w-full flex flex-col md:flex-row gap-6 md:gap-10"
         >
-          <TabsList className="flex md:flex-col h-full bg-transparent md:w-64 gap-4">
+          <TabsList className="flex flex-col h-full bg-transparent md:w-64 gap-4">
             {tabMenu.map((item) => (
               <TabsTrigger
                 key={item?.value}

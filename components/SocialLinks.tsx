@@ -25,11 +25,11 @@ const SocialLinks = () => {
         {socialData?.map((item) => (
           <Tooltip key={item.title}>
             <TooltipTrigger>
-              <div className="text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hoverEffect">
-                <Link href={"/"}>
+              <Link href={item?.href}>
+                <div className="text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hoverEffect">
                   <span>{item?.icon}</span>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </TooltipTrigger>
             <TooltipContent className="bg-hoverColor text-black font-semibold">
               {item?.title}

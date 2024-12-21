@@ -5,6 +5,7 @@ import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,14 +23,16 @@ export default function Home() {
               Assadaldin Osman
             </h1>
           </div>
-          <div className="w-full h-[170px] md:h-[140px] relative">
+          <div className="w-full h-[260px] md:h-[140px] relative">
             <div className="absolute top-0 left-0 w-full h-full">
               <HomeDescription />
             </div>
           </div>
-          <Button className="bg-transparent rounded-full border border-lightSky/50 text-lightSky hover:bg-hoverColor hover:text-black hoverEffect h-11">
-            Download cv <Download />
-          </Button>
+          <Link href={"/Assadaldin.pdf"} target="_blank">
+            <Button className="bg-transparent rounded-full border border-lightSky/50 text-lightSky hover:bg-hoverColor hover:text-black hoverEffect h-11">
+              Download cv <Download />
+            </Button>
+          </Link>
           <SocialLinks />
           <Statistics />
         </div>

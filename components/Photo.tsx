@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import assadImg from "@/images/assad4.png";
+import assadImg from "@/images/assad2.png";
 import Image from "next/image";
 import { motion } from "motion/react";
 
