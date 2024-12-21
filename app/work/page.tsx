@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import pOne from "@/images/travent.png";
 import pTwo from "@/images/oec.png";
-import pThree from "@/images/GS.png";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
