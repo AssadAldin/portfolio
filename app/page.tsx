@@ -28,7 +28,7 @@ export default function Home() {
               <HomeDescription />
             </div>
           </div>
-          <Link href={"/Assadaldin.pdf"} target="_blank">
+          <Link href={"/Assadaldin1.pdf"} target="_blank">
             <Button className="bg-transparent rounded-full border border-lightSky/50 text-lightSky hover:bg-hoverColor hover:text-black hoverEffect h-11">
               Download cv <Download />
             </Button>
