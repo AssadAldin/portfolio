@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import pOne from "@/images/travent.png";
 import pTwo from "@/images/oec.png";
+import pThree from "@/images/pThree.png";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
@@ -44,6 +45,16 @@ const projects = [
     image: pTwo,
     liveUrl: "https://oec.sd",
     githubUrl: "https://github.com/AssadAldin",
+  },
+  {
+    id: "03",
+    title: "Dr. Sara Hassan English Learning",
+    category: "Full Stack",
+    description: "This platform is designed to facilitate English learning through a user-friendly interface and an efficient course management system. Built for Dr. Sara Hassan, the site includes an admin dashboard to manage students, courses, and content. It empowers educators to streamline learning processes while offering a smooth experience for students.",
+    stack: ["Laravel", "React.js", "Tailwind CSS", "MySQL"],
+    image: pThree,
+    liveUrl: "https://drsarahassan.co.uk",
+    githubUrl: "https://github.com/AssadAldin"
   },
 ];
 
