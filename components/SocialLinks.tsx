@@ -13,7 +13,7 @@ const socialData = [
   {
     title: "Linkedin",
     icon: <Linkedin />,
-    href: "https://www.linkedin.com/in/assadaldin-osman/",
+    href: "https://www.linkedin.com/in/assadaldin",
   },
   { title: "x.com", icon: <X />, href: "https://x.com/Assadaldin96951" },
 ];
